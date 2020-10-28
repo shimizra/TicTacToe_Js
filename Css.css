@@ -1,0 +1,21 @@
+ 
+body {
+	 margin:0;
+     background-color:lightblue;
+	 font-family:Verdana;
+	 direction:ltr;
+}
+
+.MainStyle {
+	 max-width:960px;
+     background-color:white;
+	 margin:0 auto;
+	 height:500px;  
+}
+
+.Box {
+	 width:450px;
+     min-height:200px;
+	 background-color:black;
+	 margin:0 auto;
+}
