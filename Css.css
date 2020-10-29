@@ -7,10 +7,12 @@ body {
 }
 
 .MainStyle {
-	 max-width:960px;
-     background-color:white;
+	 
+	 max-width:860px;
+     //background-color:white;
+	 padding-top:15px;
 	 margin:0 auto;
-	 height:500px;  
+	 height:460px;  
 }
 
 .Boxes {
@@ -27,4 +29,19 @@ body {
 	 background-color:lightblue;
 	 float:left;
 	 box-sizing: border-box;
+}
+
+.ResetAll
+{
+   border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
