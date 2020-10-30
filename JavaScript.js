@@ -1,14 +1,14 @@
- var switch_=0
- var countMove=0
- var ArrayBox=[];
+ var switch_=0 //Binary switch zreo or one.
+ var countMove=0 // count usres moves.
+ var ArrayBox=[]; //keep the matrix box.
  
- function init() 
+ function init() //initialization. 
  {
 	 CreatBoxes();
 	 ResetArray();
  }
  
- function ResetArray()
+ function ResetArray()//Set defult values in arry.  
  {
 	//
     for(var i=0;i<9;i++)
@@ -17,7 +17,7 @@
 	 }
  }
  
- function CreatBoxes()
+ function CreatBoxes()//craete matrix 3x3 boxes.
  {
 	 
 	 for(var i=0;i<9;i++)
@@ -27,7 +27,7 @@
  }
  
  
- function MakeBox(Id)
+ function MakeBox(Id)//create box features and events.
  {
 	 this.id=Id;
 	 var IsClicked=false;
@@ -40,21 +40,21 @@
 	 
 	 
 	 var BoxImg=document.createElement("img");
-	 BoxImg.src="";
+	 BoxImg.src="";//init.
 	 
 	 NewDiv.appendChild(BoxImg);
 	 NewDiv.onclick=function()
 	 {
-		 if (IsClicked==false)
+		 if (IsClicked==false)//if not clicked.
 		 {
-			if (switch_==0)
+			if (switch_==0)//if is Corona player.
 			{
 				BoxImg.src="Pictures/CoronaVirus.jpg";
 				switch_=1;
 				//
 				ArrayBox[Id]="Corona";
 			}
-			else
+			else //Is Corona Vaccine.
 			{
 				BoxImg.src="Pictures/Vaccine.jpg";
 				switch_=0;
@@ -71,9 +71,9 @@
 	 }
  }
  
- function GameLogic()
+ function GameLogic() //The game logic.
  {
-	 if((ArrayBox[0]==ArrayBox[1])&&(ArrayBox[1]==ArrayBox[2])&&(!(ArrayBox[0]==0)))
+	 if((ArrayBox[0]==ArrayBox[1])&&(ArrayBox[1]==ArrayBox[2])&&(!(ArrayBox[0]==0))) //if is same row.
 	 {
 		 printVicrory(ArrayBox[0]);
 	 }
@@ -105,20 +105,20 @@
 	 {
 		 printVicrory(ArrayBox[6]);
 	 }
-	 else if(countMove==9)
+	 else if(countMove==9) // if no winner.
 	 {
 	     alert("Game Over!");
 		 location.reload();
 	 }
  }
  
- function printVicrory(Winner)
+ function printVicrory(Winner)//print function.
  {
 	 alert("The Winner is: " + Winner);
 	 location.reload();
  }
  
- function ResetEvent()
+ function ResetEvent()// Rest game.
  {
 	 location.reload();
  }
