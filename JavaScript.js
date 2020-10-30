@@ -40,7 +40,8 @@
 	 
 	 
 	 var BoxImg=document.createElement("img");
-	 BoxImg.src="";//init.
+	 BoxImg.src="";//init src.
+	 
 	 
 	 NewDiv.appendChild(BoxImg);
 	 NewDiv.onclick=function()
