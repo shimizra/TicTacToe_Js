@@ -55,7 +55,7 @@
 				//
 				ArrayBox[Id]="Corona";
 			}
-			else //Is Corona Vaccine.
+			else //Is Vaccine player.
 			{
 				BoxImg.src="Pictures/Vaccine.jpg";
 				switch_=0;
